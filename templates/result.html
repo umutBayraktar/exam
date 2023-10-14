@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sınav Sonuçları</title>
+</head>
+<body>
+    <h1>Sınav Sonuçları</h1>
+    <h3>Score : {{score}}<h3>
+    <p>Kullanıcı Cevapları:</p>
+    <ul>
+        {% for question_id, user_answer_id in user_answers.items %}
+            <li>Soru {{ question_id }}: Seçenek {{ user_answer_id }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'exam_view' exam_id=exam_id %}">Sınava Geri Dön</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sınavlar</title>
+</head>
+<body>
+    <h1>Sınavlar</h1>
+    <ul>
+        {% for score in exam_scores %}
+            <li><a href="{% url 'exam_view' score.exam.id %}">{{ exam.name }}</a> High Score: {{score.high_score}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

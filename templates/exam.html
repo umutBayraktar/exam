@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sınav</title>
+</head>
+<body>
+    <h1>Sınav</h1>
+    <form method="post" action="{% url 'exam_view' exam_id=exam_id %}">
+        {% csrf_token %}
+        {{ question_form.as_p }}
+        <button type="submit">Sınavı Bitir</button>
+    </form>
+</body>
+</html>
